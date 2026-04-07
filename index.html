@@ -323,7 +323,7 @@
 
     .services-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1px;
       background: var(--border);
       border: 1px solid var(--border);
@@ -765,6 +765,7 @@
       .section { padding: var(--space-l) 24px; }
 
       .services-grid { grid-template-columns: 1fr; }
+      .about-layout { grid-template-columns: 1fr !important; gap: 40px !important; }
       .process-layout { grid-template-columns: 1fr; gap: 40px; }
       .process-image { aspect-ratio: 4/3; }
       .testimonials-grid { grid-template-columns: 1fr; }
@@ -871,36 +872,54 @@
           <div class="service-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
           </div>
-          <div class="service-title">Full Search & Acquisition</div>
-          <p class="service-desc">We handle everything — identifying the right suburbs, sourcing both on-market and off-market properties, inspections, due diligence, and negotiating the best possible price on your behalf.</p>
+          <div class="service-title">Property Search & Sourcing</div>
+          <p class="service-desc">Our team of sourcers and analysts research, shortlist, and inspect properties that match your criteria — explaining market trends and insights along the way so you learn as we go.</p>
           <span class="service-tag">Most Popular</span>
         </div>
 
         <div class="service-card">
           <div class="service-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
-          <div class="service-title">Property Evaluation</div>
-          <p class="service-desc">Already found a property? We provide independent assessment and appraisal — so you know exactly what it's worth before you make an offer, and never overpay.</p>
-          <span class="service-tag">Due Diligence</span>
+          <div class="service-title">Data-Driven Market Analysis</div>
+          <p class="service-desc">Backed by in-house analysts, we use real numbers and insights to ensure every purchase decision aligns with your goals — not guesswork or gut feel.</p>
+          <span class="service-tag">Research</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="service-title">Network of Specialists</div>
+          <p class="service-desc">Access to investment-specific mortgage brokers, accountants, and advisors who understand scaling strategies — the right people, at the right time.</p>
+          <span class="service-tag">Full Team</span>
         </div>
 
         <div class="service-card">
           <div class="service-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           </div>
-          <div class="service-title">Negotiation Only</div>
-          <p class="service-desc">You've done the searching — now let a professional negotiate for you. We use proven techniques and real data to secure the best price and terms at auction or private treaty.</p>
-          <span class="service-tag">Targeted</span>
+          <div class="service-title">Negotiation & Auction Bidding</div>
+          <p class="service-desc">Professional negotiation to secure properties at the best possible price and terms — with a deeper education on strategies used, so you're empowered for life.</p>
+          <span class="service-tag">High Impact</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <div class="service-title">Due Diligence & Research</div>
+          <p class="service-desc">Thorough checks to ensure you buy the right property with confidence — and education on what to look out for in future purchases, building your knowledge for the long term.</p>
+          <span class="service-tag">Protection</span>
         </div>
 
         <div class="service-card">
           <div class="service-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </div>
-          <div class="service-title">Investment Strategy</div>
-          <p class="service-desc">Looking to build a portfolio? We help investors identify high-growth corridors, analyse yields, and build a long-term property strategy aligned with your wealth goals.</p>
-          <span class="service-tag">Investors</span>
+          <div class="service-title">Full-Service Support</div>
+          <p class="service-desc">Guidance from the first conversation right through to settlement — with clear explanations at every stage so you always know what's happening and why.</p>
+          <span class="service-tag">End-to-End</span>
         </div>
       </div>
     </div>
@@ -979,12 +998,12 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
-          <p class="testimonial-quote">"We were completely lost in the Brisbane market. Piper Avenue gave us confidence, a clear plan, and ultimately secured a property $47k under the asking price. Phenomenal."</p>
+          <p class="testimonial-quote">"We're so grateful for the countless hours Adam spent guiding and educating us, challenging our thinking and opening our eyes to opportunities we hadn't considered. His belief in us made all the difference and inspired us to think bigger about our future."</p>
           <div class="testimonial-author">
-            <div class="author-avatar">JM</div>
+            <div class="author-avatar">MB</div>
             <div>
-              <div class="author-name">James & Michelle K.</div>
-              <div class="author-loc">First Home Buyers — Paddington, QLD</div>
+              <div class="author-name">Maddy & Ben</div>
+              <div class="author-loc">Property Buyers — Queensland</div>
             </div>
           </div>
         </div>
@@ -997,12 +1016,12 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
-          <p class="testimonial-quote">"I'm an interstate investor and didn't know the Gold Coast market at all. Within 5 weeks I had a dual-income property settled. The ROI on the fee was extraordinary."</p>
+          <p class="testimonial-quote">"Adam didn't just help us buy a property — he completely changed the way we think about money and wealth. The education we received throughout the process was worth as much as the property itself."</p>
           <div class="testimonial-author">
             <div class="author-avatar">SR</div>
             <div>
               <div class="author-name">Sarah R.</div>
-              <div class="author-loc">Property Investor — Gold Coast, QLD</div>
+              <div class="author-loc">First-Time Investor — Queensland</div>
             </div>
           </div>
         </div>
@@ -1015,12 +1034,12 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           </div>
-          <p class="testimonial-quote">"After losing three auctions by ourselves, we engaged Piper Avenue. They won the very first auction they bid at for us — and saved us $31k in the process. Worth every cent."</p>
+          <p class="testimonial-quote">"Working with Piper Avenue was seamless from day one. We had access to a full team — broker, accountant, and buyers agent — all aligned to our strategy. It felt like having an unfair advantage in the market."</p>
           <div class="testimonial-author">
-            <div class="author-avatar">TD</div>
+            <div class="author-avatar">JL</div>
             <div>
-              <div class="author-name">Tom & Diana L.</div>
-              <div class="author-loc">Upsizers — Newstead, QLD</div>
+              <div class="author-name">James L.</div>
+              <div class="author-loc">Portfolio Investor — Queensland</div>
             </div>
           </div>
         </div>
@@ -1028,14 +1047,48 @@
     </div>
   </section>
 
-  <!-- WHY US -->
+  <!-- WHY US / ABOUT -->
   <section class="section" id="why" style="background: var(--white);">
     <div class="section-inner">
+
+      <!-- Adam bio -->
+      <div class="about-layout reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-bottom:var(--space-xl);">
+        <div>
+          <div class="section-label">Meet Your Advocate</div>
+          <h2 class="section-heading" style="margin-bottom:24px;">Adam — <em>10+ years of real investing experience.</em></h2>
+          <p style="font-size:16px;font-weight:300;line-height:1.8;color:var(--mid);margin-bottom:20px;">Adam brings over 10 years of personal property investing experience, with a deep understanding of how to build a successful portfolio. His serious passion lies in teaching financial literacy through property — helping clients see that buying well isn't just about securing a property, it's about improving your relationship with money and building long-term wealth.</p>
+          <p style="font-size:16px;font-weight:300;line-height:1.8;color:var(--mid);margin-bottom:32px;">At Piper Avenue, the goal isn't just to help you buy a property. It's to improve your understanding of wealth creation and give you the confidence to build a stronger financial future.</p>
+          <div style="display:flex;gap:32px;">
+            <div>
+              <div style="font-family:var(--serif);font-size:32px;font-weight:500;color:var(--charcoal);">10+</div>
+              <div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--subtle);margin-top:4px;">Years Investing</div>
+            </div>
+            <div>
+              <div style="font-family:var(--serif);font-size:32px;font-weight:500;color:var(--charcoal);">100%</div>
+              <div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--subtle);margin-top:4px;">Client-Aligned</div>
+            </div>
+            <div>
+              <div style="font-family:var(--serif);font-size:32px;font-weight:500;color:var(--charcoal);">QLD</div>
+              <div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--subtle);margin-top:4px;">Specialist Market</div>
+            </div>
+          </div>
+        </div>
+        <div style="position:relative;border-radius:var(--radius-m);overflow:hidden;aspect-ratio:4/5;">
+          <img src="https://images.squarespace-cdn.com/content/v1/68c7d5bb315b083f4c2203b3/02eb1586-d2df-4176-9040-f7f7264c9912/Screenshot+2025-09-23+152544.png?format=2500w?w=600&auto=format&fit=crop&q=80&facepad=2&fit=facearea" alt="Adam — Piper Avenue" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <div style="position:absolute;bottom:24px;left:24px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-m);padding:16px 20px;">
+            <div style="font-family:var(--serif);font-size:18px;font-weight:500;color:var(--charcoal);">Adam</div>
+            <div style="font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold);margin-top:2px;">Founder & Lead Buyers Agent</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team approach -->
       <div class="why-layout">
         <div class="why-left">
-          <div class="section-label reveal">Why Piper Avenue</div>
-          <h2 class="section-heading reveal">Your advocate.<br><em>Not the agent's.</em></h2>
-          <p class="why-body reveal">Most people buy property once or twice in their life. Selling agents do it every week. We level the playing field — giving you the expertise, market intelligence, and negotiation power that was previously only available to developers and institutions.</p>
+          <div class="section-label reveal">The Piper Avenue Difference</div>
+          <h2 class="section-heading reveal">An <em>aligned team</em> working for you.</h2>
+          <p class="why-body reveal">Working with Piper Avenue is not just about working with us — it's about working with an aligned team of experts who all share one goal: ensuring you get the best possible outcome. We use experienced sourcers alongside investment-focused mortgage brokers and accountants, ensuring you'll have access to the right people at the right time.</p>
+          <p class="why-body reveal" style="margin-top:12px;">We don't just find properties — we find the right property tailored to your individual strategy.</p>
           <div class="why-cta reveal">
             <a href="#contact" class="btn-primary">Book a Free Call</a>
           </div>
@@ -1053,11 +1106,20 @@
           </div>
           <div class="pillar">
             <div class="pillar-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <div>
+              <div class="pillar-title">Education at Every Step</div>
+              <p class="pillar-desc">We explain every decision along the way — so you're not just buying a property, you're building knowledge for life.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
             </div>
             <div>
               <div class="pillar-title">Save Time</div>
-              <p class="pillar-desc">We inspect dozens of properties, attend open homes, and do hours of research so you don't have to spend your weekends doing it.</p>
+              <p class="pillar-desc">We inspect properties, attend open homes, and do hours of research so you don't spend every weekend doing it yourself.</p>
             </div>
           </div>
           <div class="pillar">
@@ -1065,17 +1127,8 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
             </div>
             <div>
-              <div class="pillar-title">Save Money</div>
-              <p class="pillar-desc">Clients typically save 3–8% on purchase price through our negotiation, often more than covering the cost of our fee entirely.</p>
-            </div>
-          </div>
-          <div class="pillar">
-            <div class="pillar-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <div class="pillar-title">Local Intelligence</div>
-              <p class="pillar-desc">Deep Queensland market knowledge, established agent relationships, and access to off-market opportunities you'd never find alone.</p>
+              <div class="pillar-title">Build Long-Term Wealth</div>
+              <p class="pillar-desc">Every property decision is viewed through the lens of your long-term financial future — not just the transaction in front of you.</p>
             </div>
           </div>
           <div class="pillar">
@@ -1083,12 +1136,13 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
             <div>
-              <div class="pillar-title">Your Trusted Team</div>
-              <p class="pillar-desc">We refer you to a vetted network of solicitors, brokers, building inspectors, and property managers — so nothing falls through the cracks.</p>
+              <div class="pillar-title">The Right Specialists</div>
+              <p class="pillar-desc">Access our vetted network of investment-focused mortgage brokers, accountants, and advisors — all aligned to your strategy.</p>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
