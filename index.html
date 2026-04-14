@@ -141,20 +141,79 @@
     .reveal.on { opacity:1; transform:none; }
 
     @media(max-width:900px){
-      nav { padding:0 20px; } .nav-links { display:none; }
-      .hero-content { padding:0 24px 60px; }
-      .hero-stats { position:static; flex-wrap:wrap; }
-      .sec { padding:60px 24px; }
-      .svc-grid,.eq-grid { grid-template-columns:1fr; }
-      .proc-grid { grid-template-columns:1fr 1fr; gap:32px; }
-      .proc-step { border-right:none; padding-right:0; }
-      .gal-grid { grid-template-columns:1fr 1fr; }
-      .gi-1,.gi-2,.gi-3 { grid-column:auto; aspect-ratio:4/3; }
-      .ind-grid,.client-row { flex-direction:column; grid-template-columns:1fr; }
+      /* NAV */
+      nav { padding:0 20px; height:56px; }
+      .nav-links { display:none; }
+      .nav-sub { display:none; }
+      .nav-cta { padding:8px 16px; font-size:10px; }
+
+      /* HERO */
+      .hero { min-height:auto; }
+      .hero-img img { opacity:0.5; }
+      .hero-overlay { background:linear-gradient(to bottom, rgba(15,13,12,0.5) 0%, rgba(15,13,12,0.92) 60%); }
+      .hero-content { padding:80px 24px 40px; max-width:100%; }
+      .hero-h1 { font-size:clamp(40px,11vw,64px); margin-bottom:16px; }
+      .hero-p { font-size:15px; margin-bottom:28px; }
+      .hero-btns { flex-direction:column; gap:10px; }
+      .btn-solid, .btn-outline { text-align:center; padding:13px 20px; }
+      .hero-stats { position:static; width:100%; }
+      .hstat { flex:1; padding:16px 12px; text-align:center; }
+      .hstat-val { font-size:26px; }
+
+      /* SECTIONS */
+      .sec { padding:52px 24px; }
+      .sec-title { margin-bottom:32px; }
+
+      /* SERVICES */
+      .svc-grid { grid-template-columns:1fr; }
+      .svc-card { padding:28px 24px; }
+
+      /* EQUIPMENT */
+      .eq-grid { grid-template-columns:1fr 1fr; }
+      .eq-card { padding:20px; }
+      .eq-name { font-size:14px; }
+
+      /* PROCESS */
+      .proc-grid { grid-template-columns:1fr 1fr; gap:0; background:var(--border); border:1px solid var(--border); }
+      .proc-step { background:var(--light); padding:24px 20px; border-right:1px solid var(--border); border-bottom:1px solid var(--border); }
+      .proc-step:nth-child(2n) { border-right:none; }
+      .proc-step:nth-last-child(-n+2) { border-bottom:none; }
+      .proc-step:first-child { padding-left:20px; }
+      .proc-num { font-size:32px; margin-bottom:8px; }
+
+      /* GALLERY */
+      .gal-grid { grid-template-columns:1fr 1fr; gap:3px; }
+      .gi-1 { grid-column:1/3; aspect-ratio:16/9; }
+      .gi-2,.gi-3,.gi-4,.gi-5,.gi-6,.gi-7 { aspect-ratio:1/1; }
+
+      /* CLIENTS */
+      .client-row { flex-direction:column; gap:2px; }
+      .cl-cell { padding:20px; }
+      .ind-grid { grid-template-columns:1fr; }
       .ind-row { border-right:none; }
+      .ind-row:nth-last-child(-n+2) { border-bottom:1px solid var(--border); }
+      .ind-row:last-child { border-bottom:none; }
+
+      /* CONTACT */
       .contact-inner { grid-template-columns:1fr; }
-      .contact-left,.contact-right { padding:48px 24px; }
-      footer { padding:20px 24px; flex-direction:column; gap:8px; }
+      .contact-left { padding:48px 24px 36px; }
+      .contact-h2 { font-size:36px; }
+      .contact-right { padding:36px 24px 48px; border-left:none; border-top:1px solid var(--border); }
+      .cd { gap:12px; }
+      .cd-l { min-width:70px; }
+
+      /* FOOTER */
+      footer { padding:20px 24px; flex-direction:column; gap:6px; text-align:center; }
+    }
+
+    @media(max-width:480px){
+      .eq-grid { grid-template-columns:1fr; }
+      .proc-grid { grid-template-columns:1fr; }
+      .proc-step { border-right:none !important; }
+      .proc-step:nth-last-child(-n+2) { border-bottom:1px solid var(--border) !important; }
+      .proc-step:last-child { border-bottom:none !important; }
+      .gal-grid { grid-template-columns:1fr 1fr; }
+      .gi-lbl { opacity:1; }
     }
   </style>
 </head>
@@ -274,12 +333,12 @@
     <div class="contact-left">
       <div class="contact-h2">Request<br>a Quote</div>
       <p class="contact-p">Tell us what you need — from a quick turnaround job to a complex custom project. Our team is ready to bring your brief to life.</p>
-      <a href="mailto:info@belovedorange.com" class="contact-btn">Send Your Brief →</a>
+      <a href="/cdn-cgi/l/email-protection#d6bfb8b0b996b4b3bab9a0b3b2b9a4b7b8b1b3f8b5b9bb" class="contact-btn">Send Your Brief →</a>
     </div>
     <div class="contact-right">
       <div class="cd"><div class="cd-l">Address</div><div class="cd-v">1/1 Geary Cres, Molendinar QLD 4214</div></div>
       <div class="cd"><div class="cd-l">Phone</div><div class="cd-v"><a href="tel:0755393500">(07) 5539 3500</a></div></div>
-      <div class="cd"><div class="cd-l">Email</div><div class="cd-v"><a href="mailto:info@belovedorange.com">info@belovedorange.com</a></div></div>
+      <div class="cd"><div class="cd-l">Email</div><div class="cd-v"><a href="/cdn-cgi/l/email-protection#f69f989099b694939a99809392998497989193d895999b"><span class="__cf_email__" data-cfemail="abc2c5cdc4ebc9cec7c4ddcecfc4d9cac5ccce85c8c4c6">[email&#160;protected]</span></a></div></div>
       <div class="cd"><div class="cd-l">Trading</div><div class="cd-v">Beloved Orange Holdings Pty Ltd</div></div>
       <div class="cd"><div class="cd-l">Related</div><div class="cd-v"><a href="https://sneezeguardsaustralia.com.au/" target="_blank">Sneezeguards Australia</a> · <a href="http://www.menusetc.com.au/" target="_blank">Menus Etc</a></div></div>
     </div>
@@ -290,7 +349,4 @@
   <div class="ft-links"><a href="#">Privacy Policy</a></div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  const els = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver(entries => {
-    e
+<script data-cfasync="false" src="/cdn-
